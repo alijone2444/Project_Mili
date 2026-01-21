@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maleeha - A Safe Space</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particles"></canvas>
+    
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2 class="name-title">Maleeha</h2>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+            <li><a href="#truth" class="nav-link" data-section="truth">🛡️ The Truth</a></li>
+            <li><a href="#understanding" class="nav-link" data-section="understanding">💭 Understanding</a></li>
+            <li><a href="#timeline" class="nav-link" data-section="timeline">❤️ Our Timeline</a></li>
+            <li><a href="#safespace" class="nav-link" data-section="safespace">☁️ Safe Space</a></li>
+            <li><a href="#promise" class="nav-link" data-section="promise">🌱 The Promise</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="section hero-section">
+            <div class="glass-container">
+                <h1 class="hero-title fade-in">I finally stopped listening to respond, and started listening to understand.</h1>
+                <p class="hero-subtitle fade-in-delay">Maleeha, I realized that while you were fighting for your peace, I was sometimes the one disturbing it. No more.</p>
+                <div class="hero-emojis fade-in-delay-2">🌊 ✨ 🕊️</div>
+                <p class="hero-shock fade-in-delay-3">I realized I was fighting against you when I should have been fighting for you.</p>
+            </div>
+        </section>
+
+        <!-- The Truth Section -->
+        <section id="truth" class="section">
+            <div class="glass-container reveal">
+                <h2 class="section-title">🛡️ The Truth</h2>
+                <div class="content-box typewriter" id="truth-content">
+                    <p>I need to apologize for saying you "crazy stuff" as if you were a man. I shouldn't have said that. I'm so sorry. Everyone doesn't process things the same way—I should have been nicer to you. I'm sorry for that and sorry to see you in this condition.</p>
+                    <p>I know I dragged you into this 'haram' relationship and then didn't know how to protect you from the exhaustion of it. I take full responsibility for the scars. Being sensitive is not a bad thing—I know that now, but it's too late. I'm so sorry I hurt you badly.</p>
+                    <p>When you asked for space and mental peace, I kept pushing and arguing instead of understanding. I was more concerned about "what will happen to us" than your actual mental health—your eye issues, your sleep problems, your nausea. I'm sorry I didn't prioritize your well-being when you needed it most.</p>
+                </div>
+                <div class="section-emojis">😔 🙏 ❤️</div>
+            </div>
+        </section>
+
+        <!-- Accountability Section -->
+        <section id="accountability" class="section">
+            <div class="glass-container reveal">
+                <h2 class="section-title">On Accountability</h2>
+                <div class="content-box">
+                    <p>I know I dragged you into this 'haram' relationship and then didn't know how to protect you from the exhaustion of it. I take full responsibility for the scars.</p>
+                    <p>You weren't 'too sensitive' or 'too emotional'—you were just human, and I should have been nicer. I'm sorry for making you feel like you were the problem.</p>
+                    <p>During arguments, I became defensive and kept trying to win instead of understanding your feelings. I should have listened when you asked for time and space. Instead, I kept pushing and making things worse. That was my fault, not yours.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Validation Section -->
+        <section id="validation" class="section">
+            <div class="glass-container reveal scale-in">
+                <h2 class="section-title">Validation</h2>
+                <div class="content-box">
+                    <p>You weren't 'too sensitive' or 'too emotional.' You were just asking to be heard. I'm sorry for making you feel like you were the problem.</p>
+                    <p>There is no problem in you, Maleeha. You are a nice person who deserved better. When you kept thinking "masla mery mein ho" (what if the problem is in me)—that fear was unfounded. The problem was never in you. It was my inability to understand, to give you space, to prioritize your mental health over my own fears.</p>
+                    <p>You were right to need space. You were right to protect your peace. I'm sorry I made you feel guilty for doing what you needed to survive. Your sensitivity is not a weakness—it's what makes you beautifully human. You deserved gentleness and understanding, not harsh words during arguments.</p>
+                </div>
+                <div class="section-emojis">🫂 🕯️</div>
+            </div>
+        </section>
+
+        <!-- Our Timeline Section -->
+        <section id="timeline" class="section">
+            <div class="glass-container reveal">
+                <h2 class="section-title">❤️ Our Timeline</h2>
+                <div class="content-box">
+                    <p>Remember the Daewoo travels? Your courage to keep moving even when life felt shitty. Remember how you supported me even when you were struggling yourself.</p>
+                    <p>These memories matter. The times you showed up, even when you felt broken. The times you chose kindness, even when you were hurting.</p>
+                    <p>You did so much for me, even when you felt shitty. Your strength in those moments was remarkable, and I didn't always acknowledge it the way I should have.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safe Space Section -->
+        <section id="safespace" class="section">
+            <div class="glass-container reveal">
+                <h2 class="section-title">☁️ A Safe Space to Breathe</h2>
+                <div class="breathing-exercise">
+                    <div class="breath-circle" id="breathCircle">
+                        <p class="breath-text" id="breathText">Breathe In</p>
+                    </div>
+                    <button class="breath-btn" id="startBreathing">Start Breathing Exercise</button>
+                </div>
+                <div class="music-section">
+                    <h3>Your Survival Songs</h3>
+                    <p>Those rock songs that helped you survive—they're here for you. And when you need peace, there's space for soft Quranic recitations too.</p>
+                    <div class="playlist-placeholder">
+                        <p>🎵 Your music brings you peace. Keep listening to what heals you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Understanding Section -->
+        <section id="understanding" class="section">
+            <div class="glass-container reveal">
+                <h2 class="section-title">What I Should Have Understood</h2>
+                <div class="content-box">
+                    <p>When you said "I needed mental peace and spaces"—you were right. When you said "I don't have energy to argue"—you were right. When you said your eye issues and sleep problems were not normal—you were right.</p>
+                    <p>I was wrong to keep pushing when you asked for space. I was wrong to focus on "what will happen to us" instead of "how can I help you feel better." I was wrong to get defensive during arguments instead of listening to what you needed.</p>
+                    <p>You kept trying to explain, but I wasn't truly listening. You were fighting for your peace, and I was sometimes the one disturbing it. I'm sorry for that.</p>
+                </div>
+                <div class="section-emojis">💭 🌸</div>
+            </div>
+        </section>
+
+        <!-- Caring Section -->
+        <section id="caring" class="section">
+            <div class="glass-container reveal bounce-in">
+                <h2 class="section-title">Caring & Guidance</h2>
+                <div class="content-box care-tips">
+                    <p><strong>Don't isolate yourself.</strong> Stay close to your Mama—she's your strength. Take care of your health, eat, and sleep. Your peace is my priority.</p>
+                    <p>When you travel on Daewoo, travel safely. Keep your phone charged. Take care of yourself the way you've always tried to take care of others.</p>
+                    <p>Focus on your degree. Finish it. You've come so far, and I believe in you. Even if we don't talk, your success matters to me.</p>
+                    <p>I know you've been struggling with sleep, eye issues, and feeling unwell. I'm sorry I wasn't there for you properly when you needed support. Please take care of your health—it's the most important thing. Listen to your rock songs that help you survive. Do whatever you need to find peace.</p>
+                </div>
+                <div class="section-emojis">🥣 💤 👩‍👧</div>
+            </div>
+        </section>
+
+        <!-- Venting Box -->
+        <section id="venting" class="section">
+            <div class="glass-container reveal">
+                <h2 class="section-title">The Venting Box 🌪️ ➡️ ✨</h2>
+                <p class="venting-intro">This is for the "fazool bakwass" and "shitty feelings" you feel you shouldn't share. Type anything here and release it.</p>
+                <div class="venting-box">
+                    <textarea id="ventingInput" placeholder="Write whatever you need to release..."></textarea>
+                    <button id="releaseBtn" class="release-btn">Release ➡️ ✨</button>
+                </div>
+                <div id="ventingMessage" class="venting-message"></div>
+            </div>
+        </section>
+
+        <!-- The Promise Section -->
+        <section id="promise" class="section">
+            <div class="glass-container reveal pulse">
+                <h2 class="section-title">🌱 The Promise</h2>
+                <div class="content-box">
+                    <p>I want to see you finish that degree and find the stability you've always craved, with or without me.</p>
+                    <p>Whether we talk or not, I will always be the one praying for your 'suitable proposal' and a life where you never have to cry again.</p>
+                    <p>Your peace is my priority. Your happiness matters. Your future success is something I will always cheer for, from wherever I am.</p>
+                </div>
+                <div class="section-emojis">📖 🤲 ✨</div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>I hope you find peace. 🌊</p>
+        </footer>
+    </main>
+
+    <!-- Interactive Heart -->
+    <div class="heart-container" id="heartContainer">
+        <div class="heart" id="heart">❤️</div>
+        <div class="heart-message" id="heartMessage"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

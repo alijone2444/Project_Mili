@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+@layer base {
+    :root {
+        /* Healing & Reconciliation Color Palette */
+        /* Navy-to-Peach Gradient System */
+        --background: 225 45% 15%;  /* Deep navy base */
+        --foreground: 28 100% 95%;  /* Soft peach-white for text */
+        
+        /* Primary: Soft Peach */
+        --primary: 28 85% 70%;  /* Warm peach */
+        --primary-foreground: 225 45% 15%;  /* Navy text on peach */
+        --primary-glow: 28 90% 80%;  /* Lighter peach for glows */
+        
+        /* Secondary: Lavender-Blue (calming) */
+        --secondary: 245 40% 75%;  /* Soft lavender */
+        --secondary-foreground: 225 45% 15%;
+        
+        /* Accent: Rose-Pink (vulnerability) */
+        --accent: 340 65% 75%;  /* Soft rose */
+        --accent-foreground: 225 45% 15%;
+        
+        /* Muted: Soft blues for glass elements */
+        --muted: 220 30% 25%;
+        --muted-foreground: 28 70% 85%;
+        
+        /* Card: Glassmorphic containers */
+        --card: 225 40% 20%;  /* Semi-transparent navy */
+        --card-foreground: 28 100% 95%;
+        
+        --popover: 225 40% 18%;
+        --popover-foreground: 28 100% 95%;
+        
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        
+        --border: 28 60% 80%;  /* Soft peach border */
+        --input: 225 30% 25%;
+        --ring: 28 85% 70%;
+        
+        /* Custom Gradient Tokens */
+        --gradient-main: linear-gradient(135deg, hsl(225 45% 15%) 0%, hsl(225 40% 25%) 20%, hsl(245 35% 45%) 50%, hsl(28 75% 65%) 80%, hsl(28 85% 75%) 100%);
+        --gradient-glass: linear-gradient(135deg, hsla(28 85% 70% / 0.15) 0%, hsla(245 40% 75% / 0.1) 100%);
+        --gradient-text: linear-gradient(135deg, hsl(28 85% 80%) 0%, hsl(340 65% 75%) 50%, hsl(245 40% 80%) 100%);
+        
+        /* Glassmorphic Effects */
+        --glass-bg: hsla(225 40% 20% / 0.25);
+        --glass-border: hsla(28 70% 85% / 0.2);
+        --glass-shadow: 0 8px 32px 0 hsla(225 45% 10% / 0.37);
+        
+        /* Shadows for depth */
+        --shadow-soft: 0 10px 40px -10px hsla(28 85% 70% / 0.3);
+        --shadow-elegant: 0 20px 60px -15px hsla(225 45% 10% / 0.5);
+        --shadow-glow: 0 0 60px hsla(28 85% 70% / 0.4);
+        
+        /* Animations */
+        --transition-smooth: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        --transition-gentle: 0.8s cubic-bezier(0.33, 1, 0.68, 1);
+        
+        --radius: 1.5rem;
+    }
+    
+    .dark {
+        /* Same palette for consistency */
+        --background: 225 45% 15%;
+        --foreground: 28 100% 95%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply text-foreground;
+        background: var(--gradient-main);
+        background-attachment: fixed;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+    
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: hsl(var(--background));
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: hsl(var(--primary) / 0.5);
+        border-radius: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: hsl(var(--primary) / 0.7);
+    }
+}
+
+/* Glassmorphism utility classes */
+@layer utilities {
+    .glass {
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid var(--glass-border);
+        box-shadow: var(--glass-shadow);
+    }
+    
+    .glass-strong {
+        background: hsla(225 40% 20% / 0.4);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        border: 1px solid hsla(28 70% 85% / 0.3);
+        box-shadow: var(--shadow-elegant);
+    }
+    
+    .text-gradient {
+        background: var(--gradient-text);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .glow {
+        box-shadow: var(--shadow-glow);
+    }
+    
+    .glow-hover {
+        transition: box-shadow var(--transition-smooth);
+    }
+    
+    .glow-hover:hover {
+        box-shadow: var(--shadow-glow);
+    }
+}
+
+/* Custom animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-soft {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+@keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+}
+
+@keyframes breathe {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.2); opacity: 1; }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+    animation: pulse-soft 3s ease-in-out infinite;
+}
+
+.animate-breathe {
+    animation: breathe 4s ease-in-out infinite;
+}
+
+/* Typewriter effect */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: 3px solid hsl(var(--primary));
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        column-gap: inherit;
+        row-gap: inherit;
+        gap: inherit;
+        border-left-width: inherit;
+        border-right-width: inherit;
+        border-top-width: inherit;
+        border-bottom-width: inherit;
+        border-left-style: inherit;
+        border-right-style: inherit;
+        border-top-style: inherit;
+        border-bottom-style: inherit;
+        border-left-color: inherit;
+        border-right-color: inherit;
+        border-top-color: inherit;
+        border-bottom-color: inherit;
+    }
+}
