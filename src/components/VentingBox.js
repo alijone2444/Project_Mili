@@ -426,7 +426,7 @@ export const VentingBox = () => {
               <span className="text-3xl">✨</span>
             </div>
             <p className="text-muted-foreground">
-              This is for the "fazool bakwass" and "shitty feelings" you feel you shouldn't share.
+              This is for the "shitty feelings" you feel you shouldn't share.
               Write it here, then release it. Your words will dissolve into stars.
             </p>
           </div>
