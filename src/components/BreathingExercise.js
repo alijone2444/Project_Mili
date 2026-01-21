@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const phases = {
+  inhale: { duration: 4, next: 'hold', text: 'Breathe In', color: 'hsl(28 85% 70%)' },
+  hold: { duration: 4, next: 'exhale', text: 'Hold', color: 'hsl(245 40% 75%)' },
+  exhale: { duration: 4, next: 'rest', text: 'Breathe Out', color: 'hsl(340 65% 75%)' },
+  rest: { duration: 2, next: 'inhale', text: 'Rest', color: 'hsl(225 30% 25%)' },
+};
+
 export const BreathingExercise = () => {
   const [phase, setPhase] = useState('inhale'); // inhale, hold, exhale, rest
   const [count, setCount] = useState(4);
-
-  const phases = {
-    inhale: { duration: 4, next: 'hold', text: 'Breathe In', color: 'hsl(28 85% 70%)' },
-    hold: { duration: 4, next: 'exhale', text: 'Hold', color: 'hsl(245 40% 75%)' },
-    exhale: { duration: 4, next: 'rest', text: 'Breathe Out', color: 'hsl(340 65% 75%)' },
-    rest: { duration: 2, next: 'inhale', text: 'Rest', color: 'hsl(225 30% 25%)' },
-  };
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCount((prev) => {
         if (prev <= 1) {
           setPhase((currentPhase) => phases[currentPhase].next);
-          return phases[phase].duration;
+          return phases[currentPhase].duration;
         }
         return prev - 1;
       });
