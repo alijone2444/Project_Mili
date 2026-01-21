@@ -24,6 +24,7 @@ export const BreathingExercise = () => {
     }, 1000);
 
     return () => clearInterval(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase]);
 
   const currentPhase = phases[phase];
